@@ -1,10 +1,8 @@
 class SessionsController < ApplicationController
   def create
 
-  	user = User.find_by_name("Marin")
-    raise user
-    session[:user_id] = user.facebook_id
-    session[:token] = user.token
+  	user = User.authenticate(params[:email], params[:password])
+    session[:user_id] = user.primary_key
     #binding.pry
     if(user.token)
       redirect_to controller: "events", action: "index"

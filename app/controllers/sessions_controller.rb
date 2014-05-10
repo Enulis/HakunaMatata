@@ -1,7 +1,8 @@
 class SessionsController < ApplicationController
   def create
 
-  	user = User.from_omniauth(env["omniauth.auth"], session)
+  	user = User.find_by_name("Marin")
+    raise user
     session[:user_id] = user.facebook_id
     session[:token] = user.token
     #binding.pry

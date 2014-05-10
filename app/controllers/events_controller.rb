@@ -18,6 +18,20 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
+  def createstep1
+  end
+
+  def createstep2
+  end
+
+  def createstep3
+
+    @graph = Koala::Facebook::API.new(session[:token])
+    @friends = @graph.put_connetctions("me", "friends")
+    raise @friends
+
+  end
+
   # GET /events/1/edit
   def edit
   end

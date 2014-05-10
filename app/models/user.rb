@@ -3,13 +3,13 @@ class User < ActiveRecord::Base
 	has_many :events, through: :event_guests
 
 
-	def self.from_omniauth(auth)
+	def self.from_omniauth(auth, session)
 		user = User.new
 	    user.facebook_id = auth.uid
-	    user.name = auth.info.name
+	    session[:user_name] = auth.info.name
+	    session[:image] = auth.image
 	    user.token = auth.credentials.token
 	    user.token_exp = auth.credentials.expires_at
-	    user.image_url = auth.image
 	    user.save!
 	    user
 	end

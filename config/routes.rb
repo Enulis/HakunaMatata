@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'users/create'
+
+  get 'users/show'
+
   resources :event_item_lists
 
   resources :supply_items

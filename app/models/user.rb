@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
 	    user.facebook_id = auth.uid
 	    user.name = auth.info.name
 	    user.save!
+	    user
 	end
 end

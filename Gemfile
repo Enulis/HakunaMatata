@@ -41,3 +41,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'omniauth-facebook'
 
 gem 'better_errors'
+
+gem 'pry-rails'

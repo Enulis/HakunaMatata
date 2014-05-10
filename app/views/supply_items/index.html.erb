@@ -1,0 +1,27 @@
+<h1>Listing supply_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supply_items.each do |supply_item| %>
+      <tr>
+        <td><%= supply_item.name %></td>
+        <td><%= supply_item.price %></td>
+        <td><%= link_to 'Show', supply_item %></td>
+        <td><%= link_to 'Edit', edit_supply_item_path(supply_item) %></td>
+        <td><%= link_to 'Destroy', supply_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supply item', new_supply_item_path %>

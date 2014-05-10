@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :event_item_lists
+
+  resources :supply_items
+
+  resources :event_guests
+
   resources :events
 
   root to: "sessions#create"

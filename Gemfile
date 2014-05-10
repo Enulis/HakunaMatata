@@ -43,3 +43,5 @@ gem 'omniauth-facebook'
 gem 'better_errors'
 
 gem 'pry-rails'
+
+gem 'koala'

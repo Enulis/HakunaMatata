@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 
   	user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.facebook_id
+    #binding.pry
     redirect_to root_url
 	
 

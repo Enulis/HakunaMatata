@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hakuna Matata Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background: url('img/scene-light-hands-concert-1800x2880.jpg') center no-repeat;
+            font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+            color: rgb(229, 126, 33);
+            width: 100%;
+        }
+
+        #banner {
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-top: 5px solid #D55101;
+            background: #fff;
+            -moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+            -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+            box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+            z-index: 999999;
+        }
+
+            #banner h1 {
+                line-height: 60px;
+                position: absolute;
+                top: -20px;
+            }
+
+        .flyout {
+            /*width: 75%;*/
+            height: 500px;
+            margin-top: 150px;
+            /*margin-left: 10%;*/
+            font-size: 11px;
+            position: relative;
+            font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+            background-color: white;
+            padding: 9px 11px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #c5c5c5;
+            -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+            -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+            .flyout #tip {
+                background-image: url('images/tip.png');
+                background-repeat: no-repeat;
+                background-size: auto;
+                height: 11px;
+                position: absolute;
+                top: -11px;
+                left: 25px;
+                width: 20px;
+            }
+
+            .flyout h2 {
+                text-transform: uppercase;
+                color: #666;
+                font-size: 1.2em;
+                padding-bottom: 5px;
+                margin-bottom: 12px;
+                border-bottom: 1px solid #dcdbda;
+            }
+
+            .flyout p {
+                padding-bottom: 25px;
+                font-size: 1.1em;
+                color: #222;
+            }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header id="banner">
+        <h1 class="col-lg-6 col-sm-6">Hakuna Matata!</h1>
+    </header>
+    <div class="row">
+        <div class="col-lg-2 col-md-2"></div> 
+        <div class="flyout col-lg-8 col-md-8 col-sm-12 right center-block">
+            <span id="tip"></span>
+            <h2>Creating new party..</h2>
+            <p>Finding a place just right for you..</p>
+        </div>
+        <div class="col-lg-2 col-md-2"></div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

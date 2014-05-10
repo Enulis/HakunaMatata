@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adminID: 1
+  date: 2014-05-10 12:37:54
+  lon: 1.5
+  lat: 1.5
+
+two:
+  adminID: 1
+  date: 2014-05-10 12:37:54
+  lon: 1.5
+  lat: 1.5

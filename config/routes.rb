@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  
   resources :events
-
   root to: "sessions#create"
-  match 'auth/:provider/callback', to: 'sessions#create', via: [:get]
+  match 'auth/facebook/callback', to: 'sessions#create', via: [:get]
   match 'auth/failure', to: redirect('/'), via: [:get]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get]
   get 'sessions/create'

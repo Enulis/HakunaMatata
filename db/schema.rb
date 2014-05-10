@@ -11,7 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510104457) do
+ActiveRecord::Schema.define(version: 20140510112145) do
+
+  create_table "event_guests", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_item_lists", force: true do |t|
+    t.integer  "event"
+    t.integer  "supply_item"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "date"
+    t.float    "lon"
+    t.float    "lat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "supply_items", force: true do |t|
+    t.string   "name"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.integer  "facebook_id"

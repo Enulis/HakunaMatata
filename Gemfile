@@ -42,4 +42,4 @@ gem 'better_errors'
 
 gem 'pry-rails'
 
-gem 'bcrypt-ruby'
+gem 'bcrypt'

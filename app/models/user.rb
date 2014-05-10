@@ -3,14 +3,19 @@ class User < ActiveRecord::Base
 	has_many :events, through: :event_guests
 
 
-	def self.from_omniauth(auth, session)
-		user = User.new
-	    user.facebook_id = auth.uid
-	    session[:user_name] = auth.info.name
-	    session[:image] = auth.image
-	    user.token = auth.credentials.token
-	    user.token_exp = auth.credentials.expires_at
-	    user.save!
-	    user
-	end
+	def self.authenticate(email, password)
+    user = find_by_email(email)
+    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+      user
+    else
+      nil
+    end
+  end
+  
+  def encrypt_password
+    if password.present?
+      self.password_salt = BCrypt::Engine.generate_salt
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    end
+  end
 end

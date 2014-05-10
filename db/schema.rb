@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510132908) do
+ActiveRecord::Schema.define(version: 20140510155326) do
 
   create_table "event_guests", force: true do |t|
     t.integer  "user_id"
@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20140510132908) do
     t.datetime "updated_at"
   end
 
-  create_table "event_item_lists", force: true do |t|
-    t.integer  "event"
-    t.integer  "supply_item"
+  create_table "event_items", force: true do |t|
+    t.integer  "event_id"
+    t.integer  "supply_item_id"
     t.integer  "count"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,15 +31,19 @@ ActiveRecord::Schema.define(version: 20140510132908) do
   create_table "events", force: true do |t|
     t.integer  "user_id"
     t.datetime "date"
-    t.float    "lon"
-    t.float    "lat"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "location_id"
+  end
+
+  create_table "locations", force: true do |t|
+    t.float   "longitude"
+    t.float   "latitude"
+    t.integer "capacity"
   end
 
   create_table "supply_items", force: true do |t|
     t.string   "name"
-    t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,10 +52,18 @@ ActiveRecord::Schema.define(version: 20140510132908) do
     t.integer  "facebook_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "image_url"
-    t.string   "toke"
+    t.string   "token"
     t.integer  "token_exp"
+  end
+
+  create_table "vendor_items", force: true do |t|
+    t.string  "name"
+    t.integer "item_id"
+    t.integer "vendor_id"
+  end
+
+  create_table "vendors", force: true do |t|
+    t.string "name"
   end
 
 end

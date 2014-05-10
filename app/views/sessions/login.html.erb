@@ -1,6 +1,54 @@
-<div id="user_nav">
-<%= link_to "Sign in with facebook", "/auth/facebook", id: "sign_in" %>
-<%= link_to "Create Event!",  new_event_path, id: "create_event"%>
-<%= link_to "List my events", events_path, id: "list_events"%>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
 
-</div>
+    <!-- Bootstrap 
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href="Stylesheet.css" rel="stylesheet" />
+    <link href="FbLogin.css" rel="stylesheet" /> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header id="banner">
+        <h1 class="col-lg-6 col-sm-6">Hakuna Matata!</h1>
+        <div class="logo">
+            <img src="/assets/logo_small.png" />
+        </div>
+    </header>
+    <section class="container">
+        <div class="row">
+            <div class="center-block flyout col-lg-8
+              col-md-8 col-md-offset-2
+              col-sm-10 col-sm-offset-2">
+                <div class="picture visible-lg">
+                </div>
+
+                <div class="pic_overlay row">
+                    <div class="center-block col-lg-6">
+                        <h1>Keep your party under control with us.</h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <%= button_to "Facebook", "auth/facebook" , method: :get, class: "btn-block fb" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+</body>
+</html>

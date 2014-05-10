@@ -5,7 +5,9 @@ class SessionsController < ApplicationController
     session[:user_id] = user.facebook_id
     session[:token] = user.token
     #binding.pry
-    redirect_to root_url
+    if(user.token)
+      redirect_to controller: "events", action: "index"
+    end
 	
 
   end

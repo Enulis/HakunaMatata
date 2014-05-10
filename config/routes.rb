@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   resources :events
 
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get]
+  match 'auth/failure', to: redirect('/'), via: [:get]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get]
+  get 'sessions/create'
+  get 'sessions/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -30,10 +30,32 @@ users = [["Tiffany",	"Huff",			"lurenenupu-7492@yopmail.com",		"cramililed"],
 		 ["Luka",		"Matetic",		"lukam4024@gmail.com",				"password"	],
 		 ["Ivan",		"Grgurina",		"ivan.grgurina@fer.hr",				"password2"	]];
 
+locations = [[0.0, 1.3, 5],
+			 [4.2, 1.68, 10],
+			 [6.9, 10.0, 15],
+			 [3.14, 2.71, 20],
+			 [1.41, 1.71, 25]];
 
+events = [
+		 [1, nil, 1, 0],
+		 [17, nil, 2, 1],
+		 [18, nil, 2, 2],
+		 [19, nil, 3, 2],
+		 [20, nil, 5, 0],
+		 [17, nil, 4, 2],
+		 [17, nil, 2, 1],
+		 ];
 
 users.each do |name, surname, email, password|
 	salt = BCrypt::Engine.generate_salt
 	hash = BCrypt::Engine.hash_secret(password, salt)
 	User.create(name: name, surname: surname, email: email, hashed_passwords: hash, salt: salt); 
+end
+
+locations.each do |lon, lat, cap|
+	Location.create(longitude: lon, latitude: lat, capacity: cap)
+end
+
+events.each do |user, date, loc, stat|
+	Event.create(user_id: user, date: date, location_id: loc, state: stat)
 end

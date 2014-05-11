@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'locations_controller/show,'
+
+  get 'locations_controller/create'
+
   get 'users/new'
 
   get 'users/edit'

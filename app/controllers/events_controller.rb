@@ -8,26 +8,18 @@ class EventsController < ApplicationController
 
   end
 
-  # GET /events/1
-  # GET /events/1.json
-  def show
 
+  def show
+    @
   end
 
   # GET /events/new
   def new
-
-    @oauth = Koala::Facebook::OAuth.new('1494807964065307', '8d3d7b57d925b45af85a394f1fba0b1a')
-    @event = Event.new
-    @graph = Koala::Facebook::API.new(@oauth)
-    @friends = @graph.get_connections('me', "friends")
-    raise @friends
-
   end
 
   # GET /events/1/edit
   def edit
-  end
+  ends
 
   # POST /events
   # POST /events.json

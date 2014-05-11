@@ -1,0 +1,99 @@
+﻿.tbWrap .alreadyHasCheezburger {
+    display: none;
+}
+
+    .tbWrap .alreadyHasCheezburger:hover {
+        display: block;
+    }
+
+.tbWrap img {
+    width: 20%;
+    height: 20%;
+    position: relative;
+    float: right;
+    top: 150px;
+    left: 75px;
+    z-index: 500;
+}
+
+
+.applewrap {
+    height: 250px;
+}
+
+.flyout {
+    overflow: hidden;
+    height: 630px;
+}
+
+.dvoranaPicture {
+    /*background: url('http://placehold.it/300x300') center no-repeat;*/
+    background: url('http://stoneyroads.com/media/cocoon_amnesia_ibiza-e1381475340675.jpg') center no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    max-height: 250px;
+    top: -3px;
+    left: -1px;
+}
+
+.dvoranaDescription {
+    font-size: 1.6em !important;
+    height: 100%;
+}
+
+    .dvoranaDescription h3 {
+        font-size: 2em !important;
+        position: relative;
+        top: -5px;
+    }
+
+    .dvoranaDescription .glyphicon-ok-circle {
+        position: absolute;
+        top: 38%;
+        left: 87%;
+        font-size: 2.5em;
+        color: darkgreen;
+    }
+
+        .dvoranaDescription .glyphicon-ok-circle:hover {
+            top: 38%;
+            left: 86%;
+            font-size: 2.6em;
+        }
+
+    .dvoranaDescription .glyphicon-remove-circle {
+        position: absolute;
+        top: 38%;
+        left: 73%;
+        font-size: 2.5em;
+        color: darkred;
+    }
+
+        .dvoranaDescription .glyphicon-remove-circle:hover {
+            top: 38%;
+            left: 72%;
+            font-size: 2.6em;
+        }
+
+.maps {
+    margin-top: 2px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    max-height: 250px;
+    height: 250px;
+    /*position: absolute;*/
+    top: -250px;
+}
+
+.separator {
+    border: 1px gray;
+    height: 2px;
+    width: 100%;
+}
+
+.tbWrap .glyphicon {
+    font-size: 16px;
+}

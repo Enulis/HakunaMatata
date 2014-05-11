@@ -49,7 +49,7 @@ events = [
 users.each do |name, surname, email, password|
 	salt = BCrypt::Engine.generate_salt
 	hash = BCrypt::Engine.hash_secret(password, salt)
-	User.create(name: name, surname: surname, email: email, hashed_passwords: hash, salt: salt); 
+	User.create(name: name, surname: surname, email: email, hashed_passwords: hash, salt: salt)
 end
 
 locations.each do |lon, lat, cap|

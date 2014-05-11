@@ -18,12 +18,11 @@ Rails.application.routes.draw do
 
   root to: "sessions#login"
   get "sessions/login" => "sessions#login"
-  match 'auth/facebook/callback', to: 'sessions#create', via: [:get]
-  match 'auth/failure', to: redirect('/'), via: [:get]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get]
   get 'sessions/create'  
   get 'sessions/destroy'
   get 'events/index', to: "events#index", as: "events_index"
+  post 'sessions/create' => "sessions#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

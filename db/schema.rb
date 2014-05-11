@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510232035) do
+ActiveRecord::Schema.define(version: 20140511035924) do
 
   create_table "event_guests", force: true do |t|
     t.integer  "user_id"
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(version: 20140510232035) do
     t.float   "longitude"
     t.float   "latitude"
     t.integer "capacity"
+    t.string  "country",   default: "Unknown", null: false
+    t.integer "cost",      default: 0,         null: false
+    t.string  "name",      default: "Unknown", null: false
   end
 
   create_table "supply_items", force: true do |t|
@@ -68,8 +71,8 @@ ActiveRecord::Schema.define(version: 20140510232035) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "surname"
-    t.string   "email"
-    t.string   "hashed_passwords"
+    t.string   "email",            null: false
+    t.string   "hashed_passwords", null: false
     t.string   "salt"
   end
 

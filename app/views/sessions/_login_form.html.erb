@@ -1,9 +1,9 @@
 <%= form_for @user, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-	<%= f.label "Email" %>
-  <%= f.text_field :email %>
-  <%= f.label "Password"  %>
-  <%= f.password_field :password %>
+
+  <%= f.text_field :email, class: "tfield" %>
+  <%= f.label "Password" %>
+  <%= f.password_field :password, class: "tfield" %>
   <%= f.label "Password confirm"%>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: "tfield" %>
   <%= f.submit "Login" %>
 <% end %>

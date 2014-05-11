@@ -3,15 +3,21 @@ class SessionsController < ApplicationController
     session[:loaded] = true
     user = User.first
   	user = User.authenticate(params[:email], params[:password])
-    session[:user_id] = user.primary_key
-    #binding.pry
+    binding.pry
     if user
+      session[:user_id] = user.primary_key
       redirect_to controller: "events", action: "index"
+      return
     else
       redirect_to controller: "sessions", action: "login"
+      return
     end
+  end
+
+  def main
 
   end
+
 
   def destroy
   end

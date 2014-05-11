@@ -2,8 +2,6 @@ class SessionsController < ApplicationController
   def create
     session[:loaded] = true
     user = User.first
-    if user
-    raise user
   	user = User.authenticate(params[:email], params[:password])
     session[:user_id] = user.primary_key
     #binding.pry
@@ -12,7 +10,6 @@ class SessionsController < ApplicationController
     else
       redirect_to controller: "sessions", action: "login"
     end
-	
 
   end
 

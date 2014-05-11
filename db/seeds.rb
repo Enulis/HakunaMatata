@@ -30,6 +30,8 @@ users = [["Tiffany",	"Huff",			"lurenenupu-7492@yopmail.com",		"cramililed"],
 		 ["Luka",		"Matetic",		"lukam4024@gmail.com",				"password"	],
 		 ["Ivan",		"Grgurina",		"ivan.grgurina@fer.hr",				"password2"	]];
 
+
+
 users.each do |name, surname, email, password|
 	salt = BCrypt::Engine.generate_salt
 	hash = BCrypt::Engine.hash_secret(password, salt)
